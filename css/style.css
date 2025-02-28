@@ -4,10 +4,24 @@
     box-sizing: border-box;
 }
 
-.titolo{
+header{
+    background-image: url("../assets/img/wall.png");
+    background-size: auto;
+}
+
+.titoli{
     font-family: Edu Tas Beginner, sans-serif;
 }
 
-.container{
-    background-image: url("");
+body{
+    background-image: url("../assets/img/cork.png");
+    background-size: auto;
+}
+
+h1{
+    font-size: 50px;
+}
+
+p{
+    font-family: Sometype Mono, monospace;
 }
