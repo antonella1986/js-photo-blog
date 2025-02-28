@@ -13,7 +13,7 @@ function getImages() {
             
             // preparo il markup
             const markup = `
-            <div class="col-4 mb-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5 d-flex flex-wrap justify-content-center">
                 <div class="card" style="width: 16rem;">
                     <img class="pin" src="./assets/img/pin.svg" alt="">
                     <div class="img">
