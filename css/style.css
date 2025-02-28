@@ -28,13 +28,10 @@ p{
 
 .card{
     padding: 1rem;
+    height: 400px;
 }
 
-.img1{
-    background-image: url("../assets/img/alberobello.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 250px;
-    height: 300px;
+img{
+    width: 100%;
 }
 
