@@ -41,11 +41,14 @@ function getImages() {
 getImages()
 
 // overlay
-const btnChiudere = document.getElementById("btnChiuso")
-const cardContainer = document.querySelector(".cards")
-const imgEl = document.createElement("img")
-const overlay = document.createElement("div")
+const btnChiusoEl = document.querySelector("btnChiuso")
+const cardsEl = document.querySelector(".cards")
+const imgEl = document.getElementById("overlayImg")
+const overlayEl = document.querySelector("overlay")
 
-btnChiudere.addEventListener("click", () => {
-    overlay.style.display = "none";
+
+
+
+btnChiusoEl.addEventListener("click", () => {
+    overlayEl.style.display = "none";
 })
