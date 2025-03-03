@@ -41,10 +41,10 @@ function getImages() {
 getImages()
 
 // overlay
-const btnChiusoEl = document.querySelector("btnChiuso")
+const btnChiusoEl = document.querySelector(".btnChiuso")
 const cardsEl = document.querySelector(".cards")
 const imgEl = document.getElementById("overlayImg")
-const overlayEl = document.querySelector("overlay")
+const overlayEl = document.querySelector(".overlay")
 
 
 
