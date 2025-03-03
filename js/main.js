@@ -2,12 +2,16 @@ function getImages() {
     // fetcho
     fetch("https://lanciweb.github.io/demo/api/pictures/")
     .then((response) => response.json())
+    // data contiene un array con i dati che ci servono, ricevuti dall'API
     .then((data) => {
         console.log(data);
         
-        // ciclo for per generare le immagini
+        // seleziono il contenitore delle immagini
+        // cerco nella DOM l'elemento nel quale aggiungere le immagini e ci creo una costante
         const thoseCards = document.querySelector(".cards")
+        // ciclo for per generare le immagini
         for (let i = 0; i < data.length; i++) {
+            // prendo il singolo oggetto (titolo, data e immagine)
             const thisCard = data[i]
             console.log(thisCard);
             
@@ -20,7 +24,7 @@ function getImages() {
                         <img class="imgs" src="${thisCard.url}" alt="">
                     </div>
                     <p class="card-text text-body-tertiary pt-3 m-0">${thisCard.date}</p>
-                    <h5 class="titoli"><strong>${thisCard.title}</strong></h5>
+                    <h5 class="titoli"><strong>${thisCard.title.toUpperCase()}</strong></h5>
                 </div>
             </div>
             `
@@ -28,6 +32,7 @@ function getImages() {
             thoseCards.innerHTML += markup
         }
     })
+    // in caso di errore
     .catch((error) => {
         console.error(error.message); 
     })
@@ -35,6 +40,13 @@ function getImages() {
 
 getImages()
 
-
+// overlay
+function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
 
 
