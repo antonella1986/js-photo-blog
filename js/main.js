@@ -41,12 +41,11 @@ function getImages() {
 getImages()
 
 // overlay
-function on() {
-    document.getElementById("overlay").style.display = "block";
-  }
-  
-  function off() {
-    document.getElementById("overlay").style.display = "none";
-  }
+const btnChiudere = document.querySelector(".btnChiudi")
+const cardContainer = document.querySelector(".cards")
+const imgEl = document.createElement("img")
+const bodyEl = document.createElement("body")
 
-
+btnChiudere.addEventListener("click", () => {
+    // overlay display none
+})
