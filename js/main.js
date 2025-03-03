@@ -34,14 +34,18 @@ function getImages() {
         // overlay
         const btnChiusoEl = document.querySelector(".btnChiuso")
         const overlayEl = document.querySelector(".overlay")
-        const imagesEl = document.querySelector(".imgs")
+        const imagesEl = document.querySelectorAll(".imgs")
         const overlayImage = document.querySelector(".overlay img")
         
-        imagesEl.addEventListener("click", () => {
-            // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
-            overlayEl.style.display = "block";
-            overlayImage.src = event.target.src
-        })
+        imagesEl.forEach((thisImage) => {
+            thisImage.addEventListener("click", function(event) {
+                // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
+                overlayEl.style.display = "block";
+                // Richiamo l'src (l'URL dell'immagine) in modo che l'overlay mostri la foto cliccata sul momento
+                overlayImage.src = event.target.src
+            })
+        });
+        
                 
         btnChiusoEl.addEventListener("click", () => {
             overlayEl.style.display = "none";
