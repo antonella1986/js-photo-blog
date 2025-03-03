@@ -37,6 +37,7 @@ function getImages() {
         const imagesEl = document.querySelectorAll(".imgs")
         const overlayImage = document.querySelector(".overlay img")
         
+        // faccio un ciclo per applicare l'event listener su tutte le immagini
         imagesEl.forEach((thisImage) => {
             thisImage.addEventListener("click", function(event) {
                 // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
