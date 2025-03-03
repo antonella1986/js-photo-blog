@@ -41,10 +41,10 @@ function getImages() {
 getImages()
 
 // overlay
-const btnChiudere = document.querySelector(".btnChiudi")
+const btnChiudere = document.getElementById("btnChiuso")
 const cardContainer = document.querySelector(".cards")
 const imgEl = document.createElement("img")
-const overlay = document.getElementById("overlay")
+const overlay = document.createElement("div")
 
 btnChiudere.addEventListener("click", () => {
     overlay.style.display = "none";
