@@ -46,7 +46,10 @@ const cardsEl = document.querySelector(".cards")
 const imgEl = document.getElementById("overlayImg")
 const overlayEl = document.querySelector(".overlay")
 
-
+overlayEl.addEventListener("click", () => {
+    // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
+    overlayEl.style.display = "block";
+})
 
 
 btnChiusoEl.addEventListener("click", () => {
