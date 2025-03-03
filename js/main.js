@@ -44,8 +44,8 @@ getImages()
 const btnChiudere = document.querySelector(".btnChiudi")
 const cardContainer = document.querySelector(".cards")
 const imgEl = document.createElement("img")
-const bodyEl = document.createElement("body")
+const overlay = document.getElementById("overlay")
 
 btnChiudere.addEventListener("click", () => {
-    // overlay display none
+    overlay.style.display = "none";
 })
