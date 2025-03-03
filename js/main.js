@@ -33,20 +33,18 @@ function getImages() {
         }
         // overlay
         const btnChiusoEl = document.querySelector(".btnChiuso")
-        const cardsEl = document.querySelector(".cards")
-        const imgEl = document.getElementById("overlayImg")
         const overlayEl = document.querySelector(".overlay")
+        const imagesEl = document.querySelector("imgs")
         
-        overlayEl.addEventListener("click", () => {
+        imagesEl.addEventListener("click", () => {
             // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
             overlayEl.style.display = "block";
-            imgEl
         })
                 
         btnChiusoEl.addEventListener("click", () => {
             overlayEl.style.display = "none";
         })
-        
+
         // in caso di errore
         .catch((error) => {
             console.error(error.message); 
