@@ -31,27 +31,27 @@ function getImages() {
             // inserisco il nuovo HTML nella DOM
             thoseCards.innerHTML += markup
         }
-    })
-    // in caso di errore
-    .catch((error) => {
-        console.error(error.message); 
+        // overlay
+        const btnChiusoEl = document.querySelector(".btnChiuso")
+        const cardsEl = document.querySelector(".cards")
+        const imgEl = document.getElementById("overlayImg")
+        const overlayEl = document.querySelector(".overlay")
+        
+        overlayEl.addEventListener("click", () => {
+            // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
+            overlayEl.style.display = "block";
+            imgEl
+        })
+                
+        btnChiusoEl.addEventListener("click", () => {
+            overlayEl.style.display = "none";
+        })
+        
+        // in caso di errore
+        .catch((error) => {
+            console.error(error.message); 
+        })
     })
 }
 
 getImages()
-
-// overlay
-const btnChiusoEl = document.querySelector(".btnChiuso")
-const cardsEl = document.querySelector(".cards")
-const imgEl = document.getElementById("overlayImg")
-const overlayEl = document.querySelector(".overlay")
-
-overlayEl.addEventListener("click", () => {
-    // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
-    overlayEl.style.display = "block";
-})
-
-
-btnChiusoEl.addEventListener("click", () => {
-    overlayEl.style.display = "none";
-})
