@@ -34,11 +34,12 @@ function getImages() {
         // overlay
         const btnChiusoEl = document.querySelector(".btnChiuso")
         const overlayEl = document.querySelector(".overlay")
-        const imagesEl = document.querySelector("imgs")
+        const imagesEl = document.querySelector(".imgs")
         
         imagesEl.addEventListener("click", () => {
             // al click su un'immagine deve apparire l'overlay (sfondo, immagine e pulsante)
             overlayEl.style.display = "block";
+            imagesEl = `src="${thisCard.url}"`
         })
                 
         btnChiusoEl.addEventListener("click", () => {
