@@ -50,9 +50,7 @@ p{
 
 .overlay{
     position: fixed;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
     width: 100%;
     height: 100vw;
     top: 0;
@@ -64,6 +62,11 @@ p{
 }
 
 .overlayContent{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
     position: relative;
     text-align: center;
 }
@@ -71,12 +74,13 @@ p{
 .btnChiuso{
     padding: 0.5rem, 1rem;
     margin-top: 3rem;
+    margin-bottom: 2rem;
     border: none;
     cursor: pointer;
     font-size: 20px;
 }
 
 #overlayImg{
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 50%;
+    max-height: 50%;
 }
